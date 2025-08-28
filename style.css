@@ -190,7 +190,7 @@ body {
     color: #fff;
     margin: 0;
   }
-}
+
 .dropdown.open .dropdown-menu {
   display: block;
 }
