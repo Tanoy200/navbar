@@ -1,0 +1,196 @@
+/* General styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #ff0000, #512fe7, #1ce437); /* 3-color shade */
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
+/* Search box */
+.search-box {
+  display: flex;
+  align-items: center;
+}
+
+.search-box input {
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-box button {
+  padding: 6px 10px;
+  margin-left: 5px;
+  border: none;
+  background: #333;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  background: #555;
+}
+
+/* Menu links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #f0f0f0;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  min-width: 160px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-radius: 6px;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 8px 15px;
+  text-decoration: none;
+  background: linear-gradient(135deg, #d34e2d, #0d56dd, #25df44);
+  color: white;
+  border-radius: 4px;
+  margin: 4px 0;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Toggle button (hamburger) */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsive design for tablet & mobile */
+@media (max-width: 1024px) {
+  .search-box {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;   /* yaha wrap hona chahiye */
+  }
+
+  .menu-toggle {
+    display: block;
+    color: black;
+    margin-left: auto;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;             /* full width le lega */
+    background: #ddd;
+    padding: 10px 0;
+    margin-top: 10px;        /* thoda gap hamburger ke niche */
+  }
+
+  .nav-links li {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;   /* jab toggle hoga tab column layout me dikhega */
+  }
+
+  /* Dropdown in mobile */
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+    background: none;
+  }
+
+  .dropdown-menu li a {
+    background: #444;
+    color: #fff;
+    margin: 0;
+  }
+}
+
+
+  .menu-toggle {
+    display: block;
+    color: black;
+    margin-left: auto;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #ddd;
+    padding: 10px 0;
+  }
+
+  .nav-links li {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Dropdown in mobile */
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+    background: none;
+  }
+
+  .dropdown-menu li a {
+    background: #444;
+    color: #fff;
+    margin: 0;
+  }
+}
+.dropdown.open .dropdown-menu {
+  display: block;
+}
